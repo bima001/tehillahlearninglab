@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Academic Planner for Tehillah Samuel." />
+    <title>Academic Planner | Tehillah Samuel</title>
+    <link rel="icon" type="image/jpeg" href="assets/images/profile.jpeg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/planner.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrapper">
+        <a href="index.html" class="brand" aria-label="Tehillah Samuel home">
+          <span class="brand-mark">TS</span>
+          <span class="brand-text">Tehillah Samuel</span>
+        </a>
+
+        <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="planner.html" class="active">Academic Planner</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero planner-hero">
+        <div class="container planner-layout">
+          <div>
+            <p class="eyebrow">Academic Planner</p>
+            <h1>Academic command centre.</h1>
+            <p>Keep coursework close, make deadlines visible, and move one task at a time.</p>
+          </div>
+          <div class="planner-date-box">
+            <p class="date-label">Today</p>
+            <p id="todayDate" class="date-value"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section planner-section">
+        <div class="container planner-dashboard">
+          <div class="summary-grid">
+            <article class="summary-card">
+              <h3>Total Tasks</h3>
+              <p id="totalTasks">0</p>
+            </article>
+            <article class="summary-card completed-card">
+              <h3>Completed</h3>
+              <p id="completedTasks">0</p>
+            </article>
+            <article class="summary-card pending-card">
+              <h3>Pending</h3>
+              <p id="pendingTasks">0</p>
+            </article>
+            <article class="summary-card overdue-card">
+              <h3>Overdue</h3>
+              <p id="overdueTasks">0</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt-section">
+        <div class="container planner-grid">
+          <div class="form-card planner-form">
+            <h2>Add a new task</h2>
+            <form id="taskForm" novalidate>
+              <div class="form-group">
+                <label for="taskTitle">Task title</label>
+                <input id="taskTitle" type="text" name="taskTitle" placeholder="e.g. Complete biology revision" />
+                <p class="error-message" id="taskTitleError" aria-live="polite"></p>
+              </div>
+
+              <div class="form-group">
+                <label for="courseName">Course code or course name</label>
+                <input id="courseName" type="text" name="courseName" placeholder="e.g. COS 106 or Data Science" />
+                <p class="error-message" id="courseNameError" aria-live="polite"></p>
+              </div>
+
+              <div class="form-group">
+                <label for="taskCategory">Task category</label>
+                <select id="taskCategory" name="taskCategory">
+                  <option value="">Select a category</option>
+                  <option value="Assignment">Assignment</option>
+                  <option value="Reading">Reading</option>
+                  <option value="Revision">Revision</option>
+                  <option value="Examination">Examination</option>
+                  <option value="Project">Project</option>
+                </select>
+                <p class="error-message" id="taskCategoryError" aria-live="polite"></p>
+              </div>
+
+              <div class="form-group">
+                <label for="taskDueDate">Due date</label>
+                <input id="taskDueDate" type="date" name="taskDueDate" />
+                <p class="error-message" id="taskDueDateError" aria-live="polite"></p>
+              </div>
+
+              <div class="form-group">
+                <label for="taskPriority">Priority</label>
+                <select id="taskPriority" name="taskPriority">
+                  <option value="">Select priority</option>
+                  <option value="Low">Low</option>
+                  <option value="Medium">Medium</option>
+                  <option value="High">High</option>
+                </select>
+                <p class="error-message" id="taskPriorityError" aria-live="polite"></p>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Add Task</button>
+                <button type="button" id="clearAllTasks" class="btn btn-secondary">Clear All</button>
+              </div>
+            </form>
+          </div>
+
+          <aside class="schedule-card">
+            <h2>Academic overview</h2>
+            <p class="small-text">Second semester / course list</p>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Course</th><th>Title</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>MTH 102</td><td>Elementary Mathematics</td></tr>
+                  <tr><td>PHY 102</td><td>General Physics 2</td></tr>
+                  <tr><td>PHY 108</td><td>General Physics Practical</td></tr>
+                  <tr><td>COS 102</td><td>Introduction to Problem Solving</td></tr>
+                  <tr><td>CSC 106</td><td>Introduction to Web Technologies (Miva)</td></tr>
+                  <tr><td>GST 112</td><td>Nigerian People’s and Culture</td></tr>
+                  <tr><td>CSC 111</td><td>Technical Certificate in Computing 1 (Miva)</td></tr>
+                  <tr><td>GST 122</td><td>Communication in English Language</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <a class="text-link" href="about.html#academic-record">Open first-semester result ↗</a>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="task-toolbar">
+            <div class="filter-row" aria-label="Filter tasks">
+              <button class="task-filter active" type="button" data-filter="all" aria-pressed="true">All</button>
+              <button class="task-filter" type="button" data-filter="pending" aria-pressed="false">Pending</button>
+              <button class="task-filter" type="button" data-filter="completed" aria-pressed="false">Completed</button>
+              <button class="task-filter" type="button" data-filter="overdue" aria-pressed="false">Overdue</button>
+            </div>
+            <button id="sortByDate" type="button" class="btn btn-secondary btn-small">Sort by Due Date</button>
+          </div>
+
+          <div class="table-wrap task-table-wrap">
+            <table class="task-table" aria-label="Academic tasks table">
+              <thead>
+                <tr>
+                  <th>Task</th>
+                  <th>Course</th>
+                  <th>Category</th>
+                  <th>Due Date</th>
+                  <th>Priority</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="taskTableBody"></tbody>
+            </table>
+          </div>
+          <div id="emptyState" class="empty-state" hidden>
+            <p id="emptyStateMessage">No tasks yet. Add your first academic task to get started.</p>
+          </div>
+          <p class="planner-feedback" id="plannerFeedback" aria-live="polite"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>Tehillah Samuel</h3>
+          <p>B.Sc. Data Science student at Miva Open University, Nigeria.</p>
+        </div>
+
+        <div>
+          <h4>Quick links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="planner.html">Academic Planner</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>GitHub</h4>
+          <p><a href="https://github.com/bima001" target="_blank" rel="noreferrer">GitHub · bima001</a></p>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>© <span id="year"></span> Tehillah Samuel. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

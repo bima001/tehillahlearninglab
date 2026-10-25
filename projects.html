@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Projects and portfolio work for Tehillah Samuel." />
+    <title>Projects | Tehillah Samuel</title>
+    <link rel="icon" type="image/jpeg" href="assets/images/profile.jpeg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+    <script src="js/projects.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrapper">
+        <a href="index.html" class="brand" aria-label="Tehillah Samuel home">
+          <span class="brand-mark">TS</span>
+          <span class="brand-text">Tehillah Samuel</span>
+        </a>
+
+        <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="planner.html">Academic Planner</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container narrow">
+          <p class="eyebrow">Projects / experiments in progress</p>
+          <h1>Workbench for ideas, coursework, and small builds.</h1>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="filter-bar" role="group" aria-label="Project filter controls">
+            <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">All Projects</button>
+            <button class="filter-btn" type="button" data-filter="data-analysis" aria-pressed="false">Data Analysis</button>
+            <button class="filter-btn" type="button" data-filter="web-development">Web Development</button>
+            <button class="filter-btn" type="button" data-filter="academic-tools">Academic Tools</button>
+          </div>
+          <p class="project-count mono-label" id="project-count" aria-live="polite"></p>
+
+          <div class="project-grid project-grid-full" id="project-list">
+            <article class="project-card" data-category="data-analysis">
+              <img src="assets/images/project-data-analysis.svg" alt="Student Performance Analysis illustration" />
+              <div class="project-body">
+                <h3>Student Performance Analysis</h3>
+                <p><strong>Problem:</strong> Students need a clear way to analyse academic performance patterns across different subjects and assessments.</p>
+                <p><strong>Solution:</strong> Use a dataset with student IDs or names, subject scores, and total marks to identify averages, highest and lowest marks, grade distribution, and subject comparisons.</p>
+                <p><strong>Technologies:</strong> Excel or Python</p>
+                <p><strong>Status:</strong> Learning project / sample project</p>
+                <div class="tag-list">
+                  <span>Excel</span>
+                  <span>Python</span>
+                  <span>Statistics</span>
+                </div>
+                <span class="project-note mono-label">LEARNING CONCEPT / NO LIVE DEMO</span>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="academic-tools">
+              <img src="assets/images/project-student-planner.svg" alt="Academic planner illustration" />
+              <div class="project-body">
+                <h3>Academic Task Planner</h3>
+                <p><strong>Problem:</strong> Students often struggle to keep track of assignments, revision sessions, and coursework deadlines.</p>
+                <p><strong>Solution:</strong> A simple task manager that lets students add tasks, organise them by category, mark completion, and save progress in the browser.</p>
+                <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+                <p><strong>Status:</strong> Active learning project</p>
+                <div class="tag-list">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                </div>
+                <a href="planner.html" class="btn btn-secondary btn-small">View details</a>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="web-development">
+              <img src="assets/images/project-portfolio.svg" alt="Portfolio website illustration" />
+              <div class="project-body">
+                <h3>Personal Portfolio Website</h3>
+                <p><strong>Problem:</strong> Students need a professional online presence to present their profile, growth, and academic journey.</p>
+                <p><strong>Solution:</strong> A responsive website that showcases learning progress, project work, academic goals, and contact information.</p>
+                <p><strong>Technologies:</strong> HTML5, CSS3, JavaScript</p>
+                <p><strong>Status:</strong> In development</p>
+                <div class="tag-list">
+                  <span>HTML5</span>
+                  <span>CSS3</span>
+                  <span>JavaScript</span>
+                </div>
+                <a href="index.html" class="btn btn-secondary btn-small">View details</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>Tehillah Samuel</h3>
+          <p>B.Sc. Data Science student at Miva Open University, Nigeria.</p>
+        </div>
+
+        <div>
+          <h4>Quick links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="planner.html">Academic Planner</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>GitHub</h4>
+          <p><a href="https://github.com/bima001" target="_blank" rel="noreferrer">GitHub · bima001</a></p>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>© <span id="year"></span> Tehillah Samuel. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

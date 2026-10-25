@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contact Tehillah Samuel about academic collaboration and student projects." />
+    <title>Contact | Tehillah Samuel</title>
+    <link rel="icon" type="image/jpeg" href="assets/images/profile.jpeg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/contact.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrapper">
+        <a href="index.html" class="brand" aria-label="Tehillah Samuel home">
+          <span class="brand-mark">TS</span>
+          <span class="brand-text">Tehillah Samuel</span>
+        </a>
+
+        <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="planner.html">Academic Planner</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container narrow">
+          <p class="eyebrow">Contact</p>
+          <h1>Good conversations start with a hello.</h1>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container contact-layout">
+          <div class="contact-copy">
+            <p class="eyebrow">CONTACT / OPEN CHANNELS</p>
+            <h2>Find me where ideas are shared.</h2>
+            <div class="contact-links">
+              <a href="mailto:hillahayo147@gmail.com"><span>Email</span><strong>hillahayo147@gmail.com</strong><span aria-hidden="true">↗</span></a>
+              <a href="tel:08123043952"><span>Phone</span><strong>08123043952</strong><span aria-hidden="true">↗</span></a>
+              <a href="https://github.com/bima001" target="_blank" rel="noreferrer"><span>GitHub</span><strong>bima001 (Bimatech)</strong><span aria-hidden="true">↗</span></a>
+              <a href="https://www.linkedin.com/in/tehillah-samuel-83a24b412" target="_blank" rel="noreferrer"><span>LinkedIn</span><strong>Tehillah Samuel</strong><span aria-hidden="true">↗</span></a>
+            </div>
+            <p>
+              I am open to conversations about academic collaboration, student projects, learning opportunities, and technology.
+            </p>
+          </div>
+
+          <div class="form-card">
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="fullName">Full name</label>
+                <input id="fullName" name="fullName" type="text" placeholder="Enter your full name" />
+                <p class="error-message" id="fullNameError" aria-live="polite"></p>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input id="email" name="email" type="email" placeholder="Enter your email" />
+                <p class="error-message" id="emailError" aria-live="polite"></p>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone number</label>
+                <input id="phone" name="phone" type="tel" placeholder="Enter your phone number" />
+                <p class="error-message" id="phoneError" aria-live="polite"></p>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here"></textarea>
+                <p class="error-message" id="messageError" aria-live="polite"></p>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Send Message</button>
+              <p class="success-message" id="successMessage" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>Tehillah Samuel</h3>
+          <p>B.Sc. Data Science student at Miva Open University, Nigeria.</p>
+        </div>
+
+        <div>
+          <h4>Quick links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="planner.html">Academic Planner</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact Information</h4>
+          <ul class="contact-info">
+            <li><strong>Email:</strong> <a href="mailto:hillahayo147@gmail.com">hillahayo147@gmail.com</a></li>
+            <li><strong>Phone:</strong> <a href="tel:08123043952">08123043952</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/bima001" target="_blank" rel="noreferrer">bima001 (Bimatech)</a></li>
+            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/tehillah-samuel-83a24b412" target="_blank" rel="noreferrer">Tehillah Samuel</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>© <span id="year"></span> Tehillah Samuel. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
