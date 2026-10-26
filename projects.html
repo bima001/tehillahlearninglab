@@ -59,19 +59,32 @@
 
           <div class="project-grid project-grid-full" id="project-list">
             <article class="project-card" data-category="data-analysis">
-              <img src="assets/images/project-data-analysis.svg" alt="Student Performance Analysis illustration" />
-              <div class="project-body">
+              <div class="project-card__visual" aria-hidden="true">
+                <span class="project-card__number">PROJECT 01</span>
+                <span class="project-card__icon">▥</span>
+                <p>DATA / ANALYSIS</p>
+              </div>
+
+              <div class="project-card__content">
+                <p class="project-status">LEARNING PROJECT</p>
                 <h3>Student Performance Analysis</h3>
-                <p><strong>Problem:</strong> Students need a clear way to analyse academic performance patterns across different subjects and assessments.</p>
-                <p><strong>Solution:</strong> Use a dataset with student IDs or names, subject scores, and total marks to identify averages, highest and lowest marks, grade distribution, and subject comparisons.</p>
-                <p><strong>Technologies:</strong> Excel or Python</p>
-                <p><strong>Status:</strong> Learning project / sample project</p>
-                <div class="tag-list">
+                <p>
+                  Exploring fictional student assessment data to understand
+                  academic performance, compare subject averages, identify
+                  high and low scores, and examine grade distribution.
+                </p>
+                <div class="project-tags">
                   <span>Excel</span>
-                  <span>Python</span>
-                  <span>Statistics</span>
+                  <span>Data Analysis</span>
+                  <span>Charts</span>
                 </div>
-                <span class="project-note mono-label">LEARNING CONCEPT / NO LIVE DEMO</span>
+                <a
+                  href="assets/media/student_performance_analysis.xlsx"
+                  download
+                  class="project-link"
+                >
+                  Download sample workbook <span aria-hidden="true">↗</span>
+                </a>
               </div>
             </article>
 

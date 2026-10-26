@@ -425,8 +425,69 @@ a:focus-visible {
   object-fit: cover;
 }
 
+.project-card__visual {
+  min-height: 220px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  background: var(--bg-alt);
+  color: var(--heading);
+}
+
+.project-card__number,
+.project-card__visual p,
+.project-status {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.project-card__icon {
+  align-self: center;
+  color: var(--primary-dark);
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
+.project-card__visual p {
+  margin: 0;
+}
+
 .project-body {
   padding: 1.3rem;
+}
+
+.project-card__content {
+  padding: 1.3rem;
+}
+
+.project-status {
+  margin: 0 0 0.8rem;
+  color: var(--primary-dark);
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 1.1rem;
+}
+
+.project-tags span {
+  padding: 0.35rem 0.65rem;
+  background: var(--bg-alt);
+  color: var(--heading);
+  font-size: 0.8rem;
+}
+
+.project-link {
+  color: var(--primary-dark);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 
 .tag-list {
